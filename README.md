@@ -8,10 +8,11 @@ To achieve custom start binlog position ,we just need to make few changes in app
 Example file (with comments) can be found at " /canned_beer/mypipe-runner/src/main/resources/application.conf "
 
 2. Add other producers like :
-* **ConfluentkafkaProducer** for confluent platform,which supports Schema registry.
-* **kafkaJsonProducer**,which writes the events as JSON records to kafka.[STATUS:In Progress]
-* **RedShiftProducer**,producer for directly writing to redshift.[STATUS:not yet]
-* **S3Producer**,producer for directly writing to S3.[STATUS:not yet]
+**ConfluentkafkaProducer** for confluent platform,which supports Schema registry.[STATUS:In DONE]
+**kafkaJsonProducer**,which writes the events as JSON records to kafka.[STATUS:In DONE]
+**stdoutJsonproducer**,writes events to stdout as json messages(used to cross check the mesafges going into kafkaJsonProducer)
+**RedShiftProducer**,producer for directly writing to redshift.[STATUS:not yet]
+**S3Producer**,producer for directly writing to S3.[STATUS:not yet]
 
 3. Add AVRO-GEN,tool to generate avro schema files for all tables in DataBase.These schemas can be used with ConfluentKafkaProducer for writing avro serialized data to kafka.[STATUS:DONE]
 
