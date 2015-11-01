@@ -1,0 +1,32 @@
+{"namespace": "mypipe.confluent.avro",
+  "type": "record",
+  "name": "kafkatest_kafka",
+  "fields": [
+                {
+        			"name": "database",
+        			"type": "string"
+        		},
+        		{
+        			"name": "table",
+        			"type": "string"
+        		},
+        		{
+        			"name": "tableId",
+        			"type": "long"
+        		},
+          		{
+          			"name": "mutation",
+          			"type": "string"
+          		},
+          		{
+          			"name": "col1",
+          			"type": "string"
+          		},
+          		{
+          		    "name": "col2",
+          		    "type": "string"
+          		}
+
+  ]
+}
+
